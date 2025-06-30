@@ -150,7 +150,7 @@ def render_rag():
             help="Haz una pregunta clara y específica."
         )
 
-        language = st.text_input(
+        language = st.text_area(
             "Idioma de la respuesta",
             value="",
             placeholder="Ejemplo: español, english, FR, de...",
