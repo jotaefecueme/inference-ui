@@ -139,7 +139,7 @@ def render_rag():
     with st.form("form_rag"):
         rag_id = st.selectbox(
             "Tipo de consulta",
-            options=["rag_salud", "rag_laserum", "rag_teleasistencia", "rag_tarjeta65", "construccion", "out_of_scope"],
+            options=["rag-enea", "rag_salud", "rag_laserum", "rag_teleasistencia", "rag_tarjeta65", "construccion", "out_of_scope"],
             help="Elige el dominio de conocimiento para la consulta."
         )
 
