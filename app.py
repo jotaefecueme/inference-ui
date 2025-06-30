@@ -150,6 +150,12 @@ def render_rag():
             help="Haz una pregunta clara y específica."
         )
 
+        language = st.selectbox(
+            "Idioma de la respuesta",
+            placeholder="Escribe aquí el idioma en el que generar la respuesta",
+            help="Idioma en el que quieres recibir la respuesta."
+        )
+
         k = st.number_input(
             "Número de documentos a recuperar (k)",
             min_value=1,
@@ -168,7 +174,8 @@ def render_rag():
         payload = {
             "id": rag_id,
             "question": question.strip(),
-            "k": k  
+            "language": language,
+            "k": k
         }
 
         with st.spinner("⌛ Enviando consulta RAG..."):
