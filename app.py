@@ -150,11 +150,13 @@ def render_rag():
             help="Haz una pregunta clara y específica."
         )
 
-        language = st.selectbox(
+        language = st.text_input(
             "Idioma de la respuesta",
-            placeholder="Escribe aquí el idioma en el que generar la respuesta",
-            help="Idioma en el que quieres recibir la respuesta."
+            value="",
+            placeholder="Ejemplo: español, english, FR, de...",
+            help="Introduce el código del idioma en el que quieres recibir la respuesta."
         )
+
 
         k = st.number_input(
             "Número de documentos a recuperar (k)",
